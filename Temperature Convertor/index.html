@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Temperature Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="converter-container">
+      <h1>Enhanced Temperature Converter</h1>
+      <div class="theme-toggle">
+        <label for="themeSwitch">Dark Mode</label>
+        <input type="checkbox" id="themeSwitch">
+      </div>
+      <div class="converter">
+        <div class="field">
+          <label for="celsius">Celsius</label>
+          <input type="number" id="celsius" placeholder="Enter Celsius" aria-label="Celsius Input">
+          <button class="copy-btn" onclick="copyToClipboard('celsius')">Copy</button>
+          <span class="info">Used worldwide in scientific measurements.</span>
+        </div>
+        <div class="field">
+          <label for="fahrenheit">Fahrenheit</label>
+          <input type="number" id="fahrenheit" placeholder="Enter Fahrenheit" aria-label="Fahrenheit Input">
+          <button class="copy-btn" style="max-width: 100px;"  onclick="copyToClipboard('fahrenheit')">Copy</button>
+          <span class="info">Commonly used in the United States.</span>
+        </div>
+        <div class="field">
+          <label for="kelvin">Kelvin</label>
+          <input type="number" id="kelvin" placeholder="Enter Kelvin" aria-label="Kelvin Input">
+          <button class="copy-btn" style="max-width: 100px;"  onclick="copyToClipboard('kelvin')">Copy</button>
+          <span class="info">Absolute temperature scale in physics.</span>
+        </div>
+        <button id="clearButton">Clear All</button>
+      </div>
+    </div>
+    <div class="history-container">
+      <h2>Conversion History</h2>
+      <ul id="historyList"></ul>
+      <button id="clearHistoryButton">Clear History</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
